@@ -18,7 +18,7 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 
 import edu.westga.comp4420.grocery_list.model.FinancialValueType;
-import edu.westga.comp4420.grocery_list.model.GroceryItem;
+import edu.westga.comp4420.grocery_list.model.FinancialValueItem;
 import edu.westga.comp4420.grocery_list.Main;
 
 /**
@@ -29,7 +29,7 @@ import edu.westga.comp4420.grocery_list.Main;
  */
 public class MainWindow {   
 	@FXML 
-	private ListView<GroceryItem> groceryItems;
+	private ListView<FinancialValueItem> groceryItems;
 	@FXML 
 	private AnchorPane guiPane;
     @FXML
@@ -67,7 +67,7 @@ public class MainWindow {
 		if (!this.name.getText().trim().isEmpty() && !this.value.getText().trim().isEmpty()) {
 			this.errorLabel.setText("");
 			String value = this.value.getText().trim();
-			this.groceryItems.getItems().add(new GroceryItem(this.name.getText().trim(), Double.parseDouble(value), this.valueType.getValue()));
+			this.groceryItems.getItems().add(new FinancialValueItem(this.name.getText().trim(), Double.parseDouble(value), this.valueType.getValue()));
 		}
 		else {
 			this.errorLabel.setText("must have a valid name and dollar amount");
@@ -78,7 +78,7 @@ public class MainWindow {
 
 	@FXML
 	void removeItem(ActionEvent event) {
-		GroceryItem selectedItem = this.groceryItems.getSelectionModel().getSelectedItem();
+		FinancialValueItem selectedItem = this.groceryItems.getSelectionModel().getSelectedItem();
 		if (selectedItem != null) {
 			this.groceryItems.getItems().remove(selectedItem);
 		}

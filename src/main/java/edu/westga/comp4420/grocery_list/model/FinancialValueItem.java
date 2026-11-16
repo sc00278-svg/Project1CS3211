@@ -6,27 +6,27 @@ package edu.westga.comp4420.grocery_list.model;
  * @author	sc00278
  * @version Fall 2026
  */
-public final class GroceryItem {   
+public final class FinancialValueItem {   
 
 	private final String name;
 	private final double amount;
 	private final FinancialValueType type;
 	
 	/**
-	 * Create and initialize a new grocery item with the provided information.
+	 * Create and initialize a new financialVallued item with the provided information.
 	 * 
 	 * @precondition name != null &&
-	 * 				 amountNeeded > 0 &&
-	 * 				 amountInCart > 0
+	 * 				 amountNeeded > 0.000 &&
+	 * 				 type != null
 	 * @postcondition getName() == name &&
-	 * 				  getAmountNeeded() == amountNeeded &&
-	 * 				  getAmountInCart() == amountInCart
+	 * 				  getAmount() == amount &&
+	 * 				  getType() == type
 	 * 
-	 * @param name the name for the new grocery item
-	 * @param amountNeeded the amount needed to be purchased for the new grocery item
-	 * @param amountInCart the amount currently in the cart for the new grocery item
+	 * @param name the name for the new item
+	 * @param amount the money amount value of the item
+	 * @param type the type of financial value of the item
 	 */
-	public GroceryItem(String name, double amount, FinancialValueType type) {
+	public FinancialValueItem(String name, double amount, FinancialValueType type) {
 		if (name == null) {
 			throw new IllegalArgumentException("Must provide a name.");
 		}
@@ -53,6 +53,28 @@ public final class GroceryItem {
 		return this.name;
 	}
 	
+	/**
+	 * return the amount the financial value is worth
+	 * 
+	 * @return the amount of the value
+	 */
+	public double getAmount() {
+		return this.amount;
+	}
+	
+	/**
+	 * returns the type of value for the item
+	 * 
+	 * @return the type of value
+	 */
+	public FinancialValueType getType() {
+		return this.type;
+	}
+	
+	/**the toString for the item
+	 * 
+	 * @return the toString for the item to be displayed
+	 */
 	@Override
 	public String toString() {
 		return "[" + this.type.toString() + "] " + this.name + ": $" + this.amount; 

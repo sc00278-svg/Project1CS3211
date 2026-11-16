@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import java.util.List;
 
-import edu.westga.comp4420.grocery_list.model.GroceryItem;
+import edu.westga.comp4420.grocery_list.model.FinancialValueItem;
 
 /**
  * CodeBehind To Handle Processing for the AddItemWindow
@@ -15,9 +15,9 @@ import edu.westga.comp4420.grocery_list.model.GroceryItem;
 public class AddItemWindow {   
 	@FXML private AnchorPane guiPane;
 	
-	private List<GroceryItem> groceryItems;
+	private List<FinancialValueItem> groceryItems;
 	
-	public void setItemList(List<GroceryItem> groceryItems) {
+	public void setItemList(List<FinancialValueItem> groceryItems) {
 		this.groceryItems = groceryItems;
 	}
 	
