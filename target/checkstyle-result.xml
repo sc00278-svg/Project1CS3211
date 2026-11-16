@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Users\sc00278\Desktop\eclipse-workspace\Grocery List JavaFX Sample.zip_expanded\Grocery List JavaFX Sample\src\main\java\edu\westga\comp4420\grocery_list\Launcher.java">
+</file>
+<file name="C:\Users\sc00278\Desktop\eclipse-workspace\Grocery List JavaFX Sample.zip_expanded\Grocery List JavaFX Sample\src\main\java\edu\westga\comp4420\grocery_list\Main.java">
+</file>
+<file name="C:\Users\sc00278\Desktop\eclipse-workspace\Grocery List JavaFX Sample.zip_expanded\Grocery List JavaFX Sample\src\main\java\edu\westga\comp4420\grocery_list\model\FinancialValueType.java">
+</file>
+<file name="C:\Users\sc00278\Desktop\eclipse-workspace\Grocery List JavaFX Sample.zip_expanded\Grocery List JavaFX Sample\src\main\java\edu\westga\comp4420\grocery_list\model\GroceryItem.java">
+<error line="26" column="8" severity="error" message="Unused @param tag for &apos;amountNeeded&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="27" column="8" severity="error" message="Unused @param tag for &apos;amountInCart&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="29" column="44" severity="error" message="Expected @param tag for &apos;amount&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="29" column="71" severity="error" message="Expected @param tag for &apos;type&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\sc00278\Desktop\eclipse-workspace\Grocery List JavaFX Sample.zip_expanded\Grocery List JavaFX Sample\src\main\java\edu\westga\comp4420\grocery_list\view\codebehind\AddItemWindow.java">
+</file>
+<file name="C:\Users\sc00278\Desktop\eclipse-workspace\Grocery List JavaFX Sample.zip_expanded\Grocery List JavaFX Sample\src\main\java\edu\westga\comp4420\grocery_list\view\codebehind\MainWindow.java">
+<error line="8" column="8" severity="error" message="Unused import - javafx.fxml.FXMLLoader." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="9" column="8" severity="error" message="Unused import - javafx.scene.Parent." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="10" column="8" severity="error" message="Unused import - javafx.scene.Scene." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="11" column="8" severity="error" message="Unused import - javafx.stage.Stage." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="12" column="8" severity="error" message="Unused import - javafx.stage.Modality." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="13" column="8" severity="error" message="Unused import - javafx.scene.control.Alert." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="14" column="8" severity="error" message="Unused import - javafx.scene.control.Alert.AlertType." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="18" column="8" severity="error" message="Unused import - java.io.IOException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="22" column="8" severity="error" message="Unused import - edu.westga.comp4420.grocery_list.Main." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="71" column="9" severity="error" message="&apos;}&apos; at column 3 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally)." source="com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"/>
+</file>
+</checkstyle>
