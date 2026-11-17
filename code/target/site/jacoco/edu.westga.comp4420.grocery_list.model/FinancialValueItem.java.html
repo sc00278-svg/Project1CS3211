@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FinancialValueItem.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Grocery-List-App</a> &gt; <a href="index.source.html" class="el_package">edu.westga.comp4420.grocery_list.model</a> &gt; <span class="el_source">FinancialValueItem.java</span></div><h1>FinancialValueItem.java</h1><pre class="source lang-java linenums">package edu.westga.comp4420.grocery_list.model;
+
+/**
+ * Stores basic information for a single item.
+ *
+ * @author	sc00278
+ * @version Fall 2026
+ */
+public final class FinancialValueItem {   
+
+	private final String name;
+	private final double amount;
+	private final FinancialValueType type;
+	
+	/**
+	 * Create and initialize a new financialVallued item with the provided information.
+	 * 
+	 * @precondition name != null &amp;&amp;
+	 * 				 amountNeeded &gt; 0.000 &amp;&amp;
+	 * 				 type != null
+	 * @postcondition getName() == name &amp;&amp;
+	 * 				  getAmount() == amount &amp;&amp;
+	 * 				  getType() == type
+	 * 
+	 * @param name the name for the new item
+	 * @param amount the money amount value of the item
+	 * @param type the type of financial value of the item
+	 */
+<span class="fc" id="L29">	public FinancialValueItem(String name, double amount, FinancialValueType type) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">		if (name == null) {</span>
+<span class="fc" id="L31">			throw new IllegalArgumentException(&quot;Must provide a name.&quot;);</span>
+		}
+<span class="fc bfc" id="L33" title="All 2 branches covered.">		if (amount &lt;= 0.000) {</span>
+<span class="fc" id="L34">			throw new IllegalArgumentException(&quot;Must provide a positive value.&quot;);</span>
+		}
+<span class="fc bfc" id="L36" title="All 2 branches covered.">		if (type == null) {</span>
+<span class="fc" id="L37">			throw new IllegalArgumentException(&quot;Must have a type&quot;);</span>
+		}
+<span class="fc" id="L39">		this.name = name;</span>
+<span class="fc" id="L40">		this.amount = amount;</span>
+<span class="fc" id="L41">		this.type = type;</span>
+<span class="fc" id="L42">	}</span>
+	
+	/**
+	 * Return the name for the grocery item.
+	 * 
+	 * @precondition none
+	 * @postcondition none
+	 * 
+	 * @return the name for the new grocery item
+	 */
+	public String getName() {
+<span class="fc" id="L53">		return this.name;</span>
+	}
+	
+	/**
+	 * return the amount the financial value is worth
+	 * 
+	 * @return the amount of the value
+	 */
+	public double getAmount() {
+<span class="fc" id="L62">		return this.amount;</span>
+	}
+	
+	/**
+	 * returns the type of value for the item
+	 * 
+	 * @return the type of value
+	 */
+	public FinancialValueType getType() {
+<span class="fc" id="L71">		return this.type;</span>
+	}
+	
+	/**the toString for the item
+	 * 
+	 * @return the toString for the item to be displayed
+	 */
+	@Override
+	public String toString() {
+<span class="fc" id="L80">		return &quot;[&quot; + this.type.toString() + &quot;] &quot; + this.name + &quot;: $&quot; + this.amount; </span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

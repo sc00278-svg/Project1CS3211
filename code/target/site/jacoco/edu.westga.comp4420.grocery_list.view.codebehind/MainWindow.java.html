@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MainWindow.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Grocery-List-App</a> &gt; <a href="index.source.html" class="el_package">edu.westga.comp4420.grocery_list.view.codebehind</a> &gt; <span class="el_source">MainWindow.java</span></div><h1>MainWindow.java</h1><pre class="source lang-java linenums">package edu.westga.comp4420.grocery_list.view.codebehind;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+
+import edu.westga.comp4420.grocery_list.model.FinancialValueType;
+import edu.westga.comp4420.grocery_list.model.FinancialValueItem;
+
+/**
+ * CodeBehind To Handle Processing for the MainWindow
+ *
+ * @author sc00278
+ * @version Fall 2026
+ */
+<span class="nc bnc" id="L21" title="All 2 branches missed.">public class MainWindow {</span>
+	@FXML
+	private ListView&lt;FinancialValueItem&gt; groceryItems;
+	@FXML
+	private AnchorPane guiPane;
+	@FXML
+	private TextField name;
+	@FXML
+	private TextField value;
+	@FXML
+	private ComboBox&lt;FinancialValueType&gt; valueType;
+	@FXML
+	private Label errorLabel;
+
+	@FXML
+	void addItem(ActionEvent event) {
+<span class="nc bnc" id="L37" title="All 4 branches missed.">		if (!this.name.getText().trim().isEmpty() &amp;&amp; !this.value.getText().trim().isEmpty()) {</span>
+<span class="nc" id="L38">			this.errorLabel.setText(&quot;&quot;);</span>
+<span class="nc" id="L39">			String value = this.value.getText().trim();</span>
+<span class="nc" id="L40">			this.groceryItems.getItems().add(new FinancialValueItem(this.name.getText().trim(),</span>
+<span class="nc" id="L41">					Double.parseDouble(value), this.valueType.getValue()));</span>
+<span class="nc" id="L42">		} else {</span>
+<span class="nc" id="L43">			this.errorLabel.setText(&quot;must have a valid name and dollar amount&quot;);</span>
+		}
+<span class="nc" id="L45">	}</span>
+
+	@FXML
+	void removeItem(ActionEvent event) {
+<span class="nc" id="L49">		FinancialValueItem selectedItem = this.groceryItems.getSelectionModel().getSelectedItem();</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">		if (selectedItem != null) {</span>
+<span class="nc" id="L51">			this.groceryItems.getItems().remove(selectedItem);</span>
+		}
+<span class="nc" id="L53">	}</span>
+
+	@FXML
+	void initialize() {
+<span class="nc bnc" id="L57" title="All 4 branches missed.">		assert this.groceryItems != null</span>
+				: &quot;fx:id=\&quot;groceryItems\&quot; was not injected: check your FXML file 'MainWindow.fxml'.&quot;;
+<span class="nc bnc" id="L59" title="All 4 branches missed.">		assert this.guiPane != null : &quot;fx:id=\&quot;guiPane\&quot; was not injected: check your FXML file 'MainWindow.fxml'.&quot;;</span>
+<span class="nc" id="L60">		this.errorLabel.setWrapText(true);</span>
+
+<span class="nc" id="L62">		this.valueType.getItems().setAll(FinancialValueType.values());</span>
+<span class="nc" id="L63">		this.valueType.getSelectionModel().select(FinancialValueType.expense);</span>
+
+<span class="nc" id="L65">		this.value.textProperty().addListener((observable, oldValue, newValue) -&gt; {</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">			if (!newValue.matches(&quot;^\\d*(\\.\\d{0,2})?$&quot;)) {</span>
+<span class="nc" id="L67">				this.value.setText(oldValue);</span>
+			}
+<span class="nc" id="L69">		});</span>
+<span class="nc" id="L70">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
